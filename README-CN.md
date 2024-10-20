@@ -1,5 +1,4 @@
-该项目在在KutsuyaYuki/WD14Tagger的基础上进行修改
-
+该项目在在[KutsuyaYuki/WD14Tagger](https://github.com/KutsuyaYuki/WD14Tagger)的基础上进行修改
 
 Python：推荐使用3.10.9
 
@@ -30,6 +29,8 @@ replaceUnderscores：是否将标签中的下划线替换为空格。
 maxDataLoaderWorkers：数据加载器的最大线程数。
 
 只支持onnx模型，且不提供下载模型的功能，请将模型和selected_tags.csv放入你指定的文件夹
+
+下载wd14模型及selected_tags.csv请到https://huggingface.co/SmilingWolf
 
 运行run_tagger.bat调用tagger.py进行图片打标，打标完成后会将inputdir移入你指定的outputdir。
 
