@@ -1,9 +1,16 @@
+# 注意
 该项目在在[KutsuyaYuki/WD14Tagger](https://github.com/KutsuyaYuki/WD14Tagger)的基础上进行修改
 
 Python：推荐使用3.10.9
 
-# 安装依赖
+只支持onnx模型，且不提供下载模型的功能，请将模型和selected_tags.csv放入你指定的文件夹
 
+下载wd14模型及selected_tags.csv请到https://huggingface.co/SmilingWolf
+
+运行run_tagger.bat调用tagger.py进行图片打标，打标完成后会将inputdir移入你指定的outputdir。
+
+在Script completed successfully!后可以Ctrl+C退出脚本从而不移动文件夹。
+# 安装依赖
 运行setup.bat创建虚拟环境并安装依赖
 
 或者
@@ -13,7 +20,6 @@ pip install -r requirements.txt
 国内网络不佳可以使用阿里云镜像加速
 
 # 参数设置：在运行前请编辑run_tagger.bat中的参数
-
 主要参数包括：
 
 outputDir：inputdir会被移动到这里
@@ -29,15 +35,6 @@ captionExtension：生成的标签文件扩展名。
 replaceUnderscores：是否将标签中的下划线替换为空格。
 
 maxDataLoaderWorkers：数据加载器的最大线程数。
-
-# 注意
-只支持onnx模型，且不提供下载模型的功能，请将模型和selected_tags.csv放入你指定的文件夹
-
-下载wd14模型及selected_tags.csv请到https://huggingface.co/SmilingWolf
-
-运行run_tagger.bat调用tagger.py进行图片打标，打标完成后会将inputdir移入你指定的outputdir。
-
-在Script completed successfully!后可以Ctrl+C退出脚本从而不移动文件夹。
 
 
 
