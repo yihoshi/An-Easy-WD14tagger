@@ -6,7 +6,7 @@ Python：推荐使用3.10.9
 安装依赖
 运行setup.bat创建虚拟环境并安装依赖
 
-或者选择
+或者
 
 pip install -r requirements.txt
 
@@ -34,3 +34,7 @@ maxDataLoaderWorkers：数据加载器的最大线程数。
 运行run_tagger.bat调用tagger.py进行图片打标，打标完成后会将inputdir移入你指定的outputdir。
 
 在Script completed successfully!后可以直接退出脚本从而不移动文件夹。
+
+
+
+
