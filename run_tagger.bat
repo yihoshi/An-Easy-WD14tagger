@@ -51,7 +51,10 @@ if %errorlevel% neq 0 (
 echo Script completed successfully!
 echo.
 echo If you do not want to move the input directory, press Ctrl+C to exit now.
-pause
+pause >nul
+
+REM 检查是否退出
+if %errorlevel% neq 0 goto cleanup
 
 REM 移动整个输入文件夹到指定的输出文件夹
 echo Moving the entire input directory to %outputDir%...
