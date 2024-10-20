@@ -2,7 +2,7 @@
 
 Python：推荐使用3.10.9
 
-安装依赖
+# 安装依赖
 
 运行setup.bat创建虚拟环境并安装依赖
 
@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 国内网络不佳可以使用阿里云镜像加速
 
-参数设置：在运行前请编辑run_tagger.bat中的参数
+# 参数设置：在运行前请编辑run_tagger.bat中的参数
 
 主要参数包括：
 
@@ -30,6 +30,7 @@ replaceUnderscores：是否将标签中的下划线替换为空格。
 
 maxDataLoaderWorkers：数据加载器的最大线程数。
 
+# 注意
 只支持onnx模型，且不提供下载模型的功能，请将模型和selected_tags.csv放入你指定的文件夹
 
 下载wd14模型及selected_tags.csv请到https://huggingface.co/SmilingWolf
