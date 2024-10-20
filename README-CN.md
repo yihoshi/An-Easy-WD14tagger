@@ -3,7 +3,12 @@
 Python：推荐使用3.10.9
 
 安装依赖
-项目包含了一个setup.bat脚本，用于创建虚拟环境并安装所有必要的依赖项。
+运行setup.bat创建虚拟环境并安装依赖
+
+或者选择
+
+pip install -r requirements.txt
+
 国内网络不佳可以使用阿里云镜像加速
 
 参数设置：在运行前请编辑run_tagger.bat中的参数
