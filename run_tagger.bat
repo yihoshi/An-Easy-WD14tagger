@@ -3,16 +3,15 @@ chcp 65001 >nul
 setlocal
 
 REM 设置变量
-set outputDir=D:\ai\sd\素材
+set outputDir=.\tagged images
 set scriptPath=.\tagger.py
-set modelDir=D:\ai\sd\打标\tagger\models\v1-4-swinv2-tagger-v2
+set modelDir=.\models
 set batchSize=1
-set threshold=0.30
+set threshold=0.35
 set captionExtension=.txt
 set venvPath=.\venv
 set replaceUnderscores=true
 set maxDataLoaderWorkers=4
-
 
 REM 激活虚拟环境
 echo Activating virtual environment...
@@ -32,8 +31,6 @@ if not exist "%inputDir%" (
     exit /b 1
 )
 
-pause
-
 REM 运行Python脚本
 echo Running the Python script...
 python %scriptPath% ^
@@ -45,16 +42,15 @@ python %scriptPath% ^
     --max_data_loader_n_workers %maxDataLoaderWorkers% ^
     --replace_underscores
 
-pause
 REM 检查脚本运行是否成功
 if %errorlevel% neq 0 (
     echo Failed to run the Python script.
-    deactivate
-    exit /b 1
+    goto cleanup
 )
 
 echo Script completed successfully!
-
+echo.
+echo If you do not want to move the input directory, press Ctrl+C to exit now.
 pause
 
 REM 移动整个输入文件夹到指定的输出文件夹
@@ -62,11 +58,10 @@ echo Moving the entire input directory to %outputDir%...
 move "%inputDir%" "%outputDir%"
 
 echo Input directory moved successfully.
-
 pause
 
+:cleanup
 REM 退出虚拟环境
 deactivate
-
 
 endlocal
