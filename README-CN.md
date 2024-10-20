@@ -33,7 +33,7 @@ maxDataLoaderWorkers：数据加载器的最大线程数。
 
 运行run_tagger.bat调用tagger.py进行图片打标，打标完成后会将inputdir移入你指定的outputdir。
 
-在Script completed successfully!后可以直接退出脚本从而不移动文件夹。
+在Script completed successfully!后可以Ctrl+C退出脚本从而不移动文件夹。
 
 
 
