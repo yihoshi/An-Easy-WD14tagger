@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 主要参数包括：
 
-outputDir：打标后inputdir会被移动到这里
+outputDir：inputdir会被移动到这里
 
 modelDir：ONNX模型的目录。
 
